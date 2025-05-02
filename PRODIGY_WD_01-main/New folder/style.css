@@ -1,0 +1,91 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: white;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: background 0.5s;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: rgba(255, 75, 43, 0.9);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+/* Sections Styling */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 50px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+}
+
+/* Custom Backgrounds */
+#home { background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d); }
+#about { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+#services { background: linear-gradient(45deg, #ff4b2b, #ff416c); }
+#contact { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
